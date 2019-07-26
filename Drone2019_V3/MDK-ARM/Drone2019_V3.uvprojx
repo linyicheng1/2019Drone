@@ -563,6 +563,11 @@
           <GroupName>Middlewares/FreeRTOS</GroupName>
           <Files>
             <File>
+              <FileName>PC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\devices\PC.c</FilePath>
+            </File>
+            <File>
               <FileName>croutine.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Middlewares/Third_Party/FreeRTOS/Source/croutine.c</FilePath>
@@ -688,6 +693,11 @@
               <FilePath>..\devices\led.c</FilePath>
             </File>
             <File>
+              <FileName>FrictionWheel.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\devices\FrictionWheel.c</FilePath>
+            </File>
+            <File>
               <FileName>IMU.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\devices\IMU.c</FilePath>
@@ -706,6 +716,11 @@
               <FileName>GM6020.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\devices\GM6020.h</FilePath>
+            </File>
+            <File>
+              <FileName>judgment.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\devices\judgment.c</FilePath>
             </File>
           </Files>
         </Group>

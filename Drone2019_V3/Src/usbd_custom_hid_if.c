@@ -51,7 +51,9 @@
 #include "usbd_custom_hid_if.h"
 
 /* USER CODE BEGIN INCLUDE */
-
+#include "string.h"
+#include "board.h"
+#include "communication.h"
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -60,7 +62,7 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+extern PC_communication PC;
 /* USER CODE END PV */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
@@ -227,9 +229,9 @@ static int8_t CUSTOM_HID_OutEvent_FS(uint8_t event_idx, uint8_t state)
 {
   /* USER CODE BEGIN 6 */
 	USBD_CUSTOM_HID_HandleTypeDef     *hhid;
- 	HAL_GPIO_TogglePin(GPIOC, LED1_Pin);
 	hhid = (USBD_CUSTOM_HID_HandleTypeDef*) hUsbDeviceFS.pClassData;
-
+  memcpy(PC.rx_buffer,hhid->Report_buf,8);
+	PC.updateTime = GetSysTimeMs();
   return (USBD_OK);
   /* USER CODE END 6 */
 }

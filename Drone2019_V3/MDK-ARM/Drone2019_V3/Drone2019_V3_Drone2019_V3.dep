@@ -1,6 +1,6 @@
 Dependencies for Project 'Drone2019_V3', Target 'Drone2019_V3': (DO NOT MODIFY !)
-F (startup_stm32f105xc.s)(0x5CCFC7D5)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\\Inc-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 527" --pd "_RTE_ SETA 1" --pd "STM32F10X_CL SETA 1"--list startup_stm32f105xc.lst --xref -o drone2019_v3\startup_stm32f105xc.o --depend drone2019_v3\startup_stm32f105xc.d)
-F (../Src/main.c)(0x5CD6CCBF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\main.o --omf_browse drone2019_v3\main.crf --depend drone2019_v3\main.d)
+F (startup_stm32f105xc.s)(0x5D3A50AD)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\\Inc-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 527" --pd "_RTE_ SETA 1" --pd "STM32F10X_CL SETA 1"--list startup_stm32f105xc.lst --xref -o drone2019_v3\startup_stm32f105xc.o --depend drone2019_v3\startup_stm32f105xc.d)
+F (../Src/main.c)(0x5D2F3B19)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\main.o --omf_browse drone2019_v3\main.crf --depend drone2019_v3\main.d)
 I (../Inc/main.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
@@ -56,6 +56,10 @@ I (../Inc/usbd_conf.h)(0x5CCFC7CF)
 I (F:\keil\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (F:\keil\ARM\ARMCC\include\string.h)(0x599ECD2C)
 I (../Inc/gpio.h)(0x5CCFC7C7)
+I (..\boards\drv_can.h)(0x5D1C23A2)
+I (..\boards\board.h)(0x5CC99EFC)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
+I (..\boards\drv_uart.h)(0x5CC7FBE2)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x5C1BAE70)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x5C1BAE70)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x5C1BAE70)
@@ -212,9 +216,9 @@ I (F:\keil\ARM\ARMCC\include\string.h)(0x599ECD2C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x5C1BAE70)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x5C1BAE70)
 I (..\boards\board.h)(0x5CC99EFC)
-I (..\boards\drv_tim.h)(0x5CCFC944)
-I (..\boards\drv_can.h)(0x5CCF23B3)
-I (..\Task\selfCheck.h)(0x5CD6A493)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
+I (..\boards\drv_can.h)(0x5D1C23A2)
+I (..\Task\selfCheck.h)(0x5D312AE9)
 F (../Src/tim.c)(0x5CD6B401)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\tim.o --omf_browse drone2019_v3\tim.crf --depend drone2019_v3\tim.d)
 I (../Inc/tim.h)(0x5CCFC7CE)
 I (../Inc/main.h)(0x5CCFC7D1)
@@ -247,7 +251,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
-F (../Src/usart.c)(0x5CCFC7CF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\usart.o --omf_browse drone2019_v3\usart.crf --depend drone2019_v3\usart.d)
+F (../Src/usart.c)(0x5CE2FBA1)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\usart.o --omf_browse drone2019_v3\usart.crf --depend drone2019_v3\usart.d)
 I (../Inc/usart.h)(0x5CCFC7CF)
 I (../Inc/main.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
@@ -399,7 +403,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x5C1BAE70)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x5C1BAE70)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x5C1BAE70)
 I (../Inc/usbd_desc.h)(0x5CCFC7CF)
-F (../Src/usbd_custom_hid_if.c)(0x5CCFC7D0)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\usbd_custom_hid_if.o --omf_browse drone2019_v3\usbd_custom_hid_if.crf --depend drone2019_v3\usbd_custom_hid_if.d)
+F (../Src/usbd_custom_hid_if.c)(0x5CEF9A2D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\usbd_custom_hid_if.o --omf_browse drone2019_v3\usbd_custom_hid_if.crf --depend drone2019_v3\usbd_custom_hid_if.d)
 I (../Inc/usbd_custom_hid_if.h)(0x5CCFC7D0)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x5C1BAE70)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x5C1BAE70)
@@ -439,6 +443,27 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x5C1BAE70)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x5C1BAE70)
+I (..\boards\board.h)(0x5CC99EFC)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
+I (..\boards\drv_uart.h)(0x5CC7FBE2)
+I (..\boards\drv_can.h)(0x5D1C23A2)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5C1BAE74)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
+I (F:\keil\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
+I (../Inc/FreeRTOSConfig.h)(0x5CCFC7CD)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x5C1BAE74)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5C1BAE74)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5C1BAE74)
+I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x5C1BAE75)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5C1BAE74)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5C1BAE74)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5C1BAE74)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5C1BAE74)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5C1BAE74)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C1BAE74)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C1BAE74)
+I (..\Task\communication.h)(0x5CEF9B8F)
+I (..\devices\pc.h)(0x5CF51CAB)
 F (../Src/stm32f1xx_it.c)(0x5CD6B182)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\stm32f1xx_it.o --omf_browse drone2019_v3\stm32f1xx_it.crf --depend drone2019_v3\stm32f1xx_it.d)
 I (../Inc/main.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
@@ -487,9 +512,9 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C1BAE74)
 I (..\boards\board.h)(0x5CC99EFC)
-I (..\boards\drv_tim.h)(0x5CCFC944)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
 I (..\boards\drv_uart.h)(0x5CC7FBE2)
-I (..\boards\drv_can.h)(0x5CCF23B3)
+I (..\boards\drv_can.h)(0x5D1C23A2)
 F (../Src/stm32f1xx_hal_msp.c)(0x5CCFC7D1)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\stm32f1xx_hal_msp.o --omf_browse drone2019_v3\stm32f1xx_hal_msp.crf --depend drone2019_v3\stm32f1xx_hal_msp.d)
 I (../Inc/main.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
@@ -1061,6 +1086,38 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
+F (..\devices\PC.c)(0x5CF51E11)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\pc.o --omf_browse drone2019_v3\pc.crf --depend drone2019_v3\pc.d)
+I (..\devices\pc.h)(0x5CF51CAB)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5C1BAE4E)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f105xc.h)(0x5C1BAE4E)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x5C1BAE6F)
+I (F:\keil\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x5C1BAE4E)
+I (F:\keil\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
+I (F:\keil\ARM\ARMCC\include\string.h)(0x599ECD2C)
 F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x5C1BAE74)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\croutine.o --omf_browse drone2019_v3\croutine.crf --depend drone2019_v3\croutine.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
 I (F:\keil\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
@@ -1347,7 +1404,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x5C1BAE70
 I (../Inc/usbd_desc.h)(0x5CCFC7CF)
 F (..\boards\board.c)(0x5CC99EF4)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\board.o --omf_browse drone2019_v3\board.crf --depend drone2019_v3\board.d)
 I (..\boards\board.h)(0x5CC99EFC)
-I (..\boards\drv_tim.h)(0x5CCFC944)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
@@ -1378,7 +1435,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
 I (..\boards\drv_uart.h)(0x5CC7FBE2)
-I (..\boards\drv_can.h)(0x5CCF23B3)
+I (..\boards\drv_can.h)(0x5D1C23A2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
 I (F:\keil\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
@@ -1394,8 +1451,8 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C1BAE74)
-F (..\boards\drv_can.c)(0x5CD3DC58)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\drv_can.o --omf_browse drone2019_v3\drv_can.crf --depend drone2019_v3\drv_can.d)
-I (..\boards\drv_can.h)(0x5CCF23B3)
+F (..\boards\drv_can.c)(0x5D1C3A71)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\drv_can.o --omf_browse drone2019_v3\drv_can.crf --depend drone2019_v3\drv_can.d)
+I (..\boards\drv_can.h)(0x5D1C23A2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
@@ -1426,7 +1483,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
 I (..\boards\board.h)(0x5CC99EFC)
-I (..\boards\drv_tim.h)(0x5CCFC944)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
 I (..\boards\drv_uart.h)(0x5CC7FBE2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
@@ -1481,8 +1538,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
-F (..\boards\drv_tim.c)(0x5CD6C3A3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\drv_tim.o --omf_browse drone2019_v3\drv_tim.crf --depend drone2019_v3\drv_tim.d)
-I (..\boards\drv_tim.h)(0x5CCFC944)
+F (..\boards\drv_tim.c)(0x5CE7B2BC)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\drv_tim.o --omf_browse drone2019_v3\drv_tim.crf --depend drone2019_v3\drv_tim.d)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
@@ -1512,7 +1569,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
-F (..\boards\drv_uart.c)(0x5CD6AF0D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\drv_uart.o --omf_browse drone2019_v3\drv_uart.crf --depend drone2019_v3\drv_uart.d)
+F (..\boards\drv_uart.c)(0x5CEF8DBF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\drv_uart.o --omf_browse drone2019_v3\drv_uart.crf --depend drone2019_v3\drv_uart.d)
 I (..\boards\drv_uart.h)(0x5CC7FBE2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
@@ -1544,8 +1601,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
 I (..\boards\board.h)(0x5CC99EFC)
-I (..\boards\drv_tim.h)(0x5CCFC944)
-I (..\boards\drv_can.h)(0x5CCF23B3)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
+I (..\boards\drv_can.h)(0x5D1C23A2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
 I (F:\keil\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
@@ -1561,8 +1618,9 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C1BAE74)
-I (..\devices\dbus.h)(0x5CD6CF64)
+I (..\devices\dbus.h)(0x5D1C6C76)
 I (..\devices\volt+.h)(0x5CC7F9DC)
+I (F:\keil\ARM\ARMCC\include\string.h)(0x599ECD2C)
 F (..\devices\volt+.c)(0x5CC80D28)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\volt+.o --omf_browse drone2019_v3\volt+.crf --depend drone2019_v3\volt+.d)
 I (..\devices\volt+.h)(0x5CC7F9DC)
 I (..\boards\drv_uart.h)(0x5CC7FBE2)
@@ -1596,8 +1654,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
 I (F:\keil\ARM\ARMCC\include\string.h)(0x599ECD2C)
-F (..\devices\dbus.c)(0x5CD6A649)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\dbus.o --omf_browse drone2019_v3\dbus.crf --depend drone2019_v3\dbus.d)
-I (..\devices\dbus.h)(0x5CD6CF64)
+F (..\devices\dbus.c)(0x5CF0C01D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\dbus.o --omf_browse drone2019_v3\dbus.crf --depend drone2019_v3\dbus.d)
+I (..\devices\dbus.h)(0x5D1C6C76)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
@@ -1629,9 +1687,9 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
 I (F:\keil\ARM\ARMCC\include\string.h)(0x599ECD2C)
 I (..\boards\board.h)(0x5CC99EFC)
-I (..\boards\drv_tim.h)(0x5CCFC944)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
 I (..\boards\drv_uart.h)(0x5CC7FBE2)
-I (..\boards\drv_can.h)(0x5CCF23B3)
+I (..\boards\drv_can.h)(0x5D1C23A2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
 I (F:\keil\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
@@ -1649,7 +1707,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C1BAE74)
 F (..\devices\motor.c)(0x5CD6B250)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\motor.o --omf_browse drone2019_v3\motor.crf --depend drone2019_v3\motor.d)
 I (..\devices\motor.h)(0x5CD6A171)
-I (..\boards\drv_can.h)(0x5CCF23B3)
+I (..\boards\drv_can.h)(0x5D1C23A2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
@@ -1680,7 +1738,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
 I (..\boards\board.h)(0x5CC99EFC)
-I (..\boards\drv_tim.h)(0x5CCFC944)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
 I (..\boards\drv_uart.h)(0x5CC7FBE2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
@@ -1703,8 +1761,8 @@ I (..\algorithm\ZeroCheck.h)(0x5C6105A8)
 I (..\devices\GM6020.h)(0x5CCFDB61)
 I (..\devices\MX64.h)(0x5CD67A34)
 I (..\devices\IMU.h)(0x5CCFD531)
-F (..\devices\led.c)(0x5CD04AC0)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\led.o --omf_browse drone2019_v3\led.crf --depend drone2019_v3\led.d)
-I (..\devices\led.h)(0x5CD04AFD)
+F (..\devices\led.c)(0x5D1AFECE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\led.o --omf_browse drone2019_v3\led.crf --depend drone2019_v3\led.d)
+I (..\devices\led.h)(0x5D1AFED7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
@@ -1735,6 +1793,38 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
 I (../Inc/main.h)(0x5CCFC7D1)
+F (..\devices\FrictionWheel.c)(0x5CEFC0C5)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\frictionwheel.o --omf_browse drone2019_v3\frictionwheel.crf --depend drone2019_v3\frictionwheel.d)
+I (..\devices\FrictionWheel.h)(0x5CEFB68D)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5C1BAE4E)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f105xc.h)(0x5C1BAE4E)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x5C1BAE6F)
+I (F:\keil\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x5C1BAE4E)
+I (F:\keil\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
 F (..\devices\IMU.c)(0x5CCFD7D5)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\imu.o --omf_browse drone2019_v3\imu.crf --depend drone2019_v3\imu.d)
 I (..\devices\IMU.h)(0x5CCFD531)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
@@ -1767,9 +1857,9 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
 I (F:\keil\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\boards\drv_can.h)(0x5CCF23B3)
+I (..\boards\drv_can.h)(0x5D1C23A2)
 I (..\boards\board.h)(0x5CC99EFC)
-I (..\boards\drv_tim.h)(0x5CCFC944)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
 I (..\boards\drv_uart.h)(0x5CC7FBE2)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
@@ -1789,6 +1879,39 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C1BAE74
 F (..\devices\M2006.h)(0x5CCFDB61)()
 F (..\devices\MX64.h)(0x5CD67A34)()
 F (..\devices\GM6020.h)(0x5CCFDB61)()
+F (..\devices\judgment.c)(0x5D37FF79)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\judgment.o --omf_browse drone2019_v3\judgment.crf --depend drone2019_v3\judgment.d)
+I (..\devices\judgment.h)(0x5D37A3DF)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5C1BAE4E)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f105xc.h)(0x5C1BAE4E)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x5C1BAE6F)
+I (F:\keil\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x5C1BAE4E)
+I (F:\keil\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
+I (F:\keil\ARM\ARMCC\include\string.h)(0x599ECD2C)
+I (..\algorithm\algorithmOfCRC.h)(0x5C610FFD)
 F (..\algorithm\algorithmOfCRC.c)(0x5C63EC2A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\algorithmofcrc.o --omf_browse drone2019_v3\algorithmofcrc.crf --depend drone2019_v3\algorithmofcrc.d)
 I (..\algorithm\algorithmOfCRC.h)(0x5C610FFD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
@@ -1883,7 +2006,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
-F (..\Task\communication.c)(0x5CCA87C0)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\communication.o --omf_browse drone2019_v3\communication.crf --depend drone2019_v3\communication.d)
+F (..\Task\communication.c)(0x5D3A823F)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\communication.o --omf_browse drone2019_v3\communication.crf --depend drone2019_v3\communication.d)
+I (F:\keil\ARM\ARMCC\include\string.h)(0x599ECD2C)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
 I (F:\keil\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (F:\keil\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -1893,7 +2017,36 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x5C1BAE75)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5C1BAE74)
-I (..\Task\communication.h)(0x5CCFE253)
+I (..\Task\communication.h)(0x5CEF9B8F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
+I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x5C1BAE4E)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f105xc.h)(0x5C1BAE4E)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C1BAE6F)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x5C1BAE4E)
+I (F:\keil\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
+I (..\devices\pc.h)(0x5CF51CAB)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5C1BAE74)
@@ -1901,7 +2054,19 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C1BAE74)
-F (..\Task\debug.c)(0x5CCA87A9)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\debug.o --omf_browse drone2019_v3\debug.crf --depend drone2019_v3\debug.d)
+I (../Inc/usbd_custom_hid_if.h)(0x5CCFC7D0)
+I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x5C1BAE70)
+I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x5C1BAE70)
+I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x5C1BAE70)
+I (../Inc/usbd_conf.h)(0x5CCFC7CF)
+I (F:\keil\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
+I (../Inc/main.h)(0x5CCFC7D1)
+I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x5C1BAE70)
+I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x5C1BAE70)
+I (..\devices\imu.h)(0x5CCFD531)
+I (..\devices\judgment.h)(0x5D37A3DF)
+I (..\devices\dbus.h)(0x5D1C6C76)
+F (..\Task\debug.c)(0x5CEF9A63)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\debug.o --omf_browse drone2019_v3\debug.crf --depend drone2019_v3\debug.d)
 I (..\Task\debug.h)(0x5CCA801A)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
 I (F:\keil\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
@@ -1948,8 +2113,17 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
-F (..\Task\gimbal.c)(0x5CD8175A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\gimbal.o --omf_browse drone2019_v3\gimbal.crf --depend drone2019_v3\gimbal.d)
-I (..\Task\gimbal.h)(0x5CCFDB61)
+I (..\devices\motor.h)(0x5CD6A171)
+I (..\boards\drv_can.h)(0x5D1C23A2)
+I (..\boards\board.h)(0x5CC99EFC)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
+I (..\devices\M2006.h)(0x5CCFDB61)
+I (..\algorithm\pid.h)(0x5C60FECB)
+I (..\algorithm\ZeroCheck.h)(0x5C6105A8)
+I (..\devices\GM6020.h)(0x5CCFDB61)
+I (..\devices\MX64.h)(0x5CD67A34)
+F (..\Task\gimbal.c)(0x5D312B0B)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\gimbal.o --omf_browse drone2019_v3\gimbal.crf --depend drone2019_v3\gimbal.d)
+I (..\Task\gimbal.h)(0x5D2BADD0)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
 I (F:\keil\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (F:\keil\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -1967,7 +2141,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C1BAE74)
 I (..\devices\motor.h)(0x5CD6A171)
-I (..\boards\drv_can.h)(0x5CCF23B3)
+I (..\boards\drv_can.h)(0x5D1C23A2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
@@ -1997,16 +2171,18 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
 I (..\boards\board.h)(0x5CC99EFC)
-I (..\boards\drv_tim.h)(0x5CCFC944)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
 I (..\boards\drv_uart.h)(0x5CC7FBE2)
 I (..\devices\M2006.h)(0x5CCFDB61)
 I (..\algorithm\pid.h)(0x5C60FECB)
 I (..\algorithm\ZeroCheck.h)(0x5C6105A8)
 I (..\devices\GM6020.h)(0x5CCFDB61)
 I (..\devices\MX64.h)(0x5CD67A34)
-I (..\devices\dbus.h)(0x5CD6CF64)
-I (..\Task\selfcheck.h)(0x5CD6A493)
-F (..\Task\selfCheck.c)(0x5CD6C302)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\selfcheck.o --omf_browse drone2019_v3\selfcheck.crf --depend drone2019_v3\selfcheck.d)
+I (..\devices\dbus.h)(0x5D1C6C76)
+I (..\Task\selfcheck.h)(0x5D312AE9)
+I (..\devices\pc.h)(0x5CF51CAB)
+I (..\devices\imu.h)(0x5CCFD531)
+F (..\Task\selfCheck.c)(0x5D2BAE6E)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\selfcheck.o --omf_browse drone2019_v3\selfcheck.crf --depend drone2019_v3\selfcheck.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
 I (F:\keil\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (F:\keil\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -2016,7 +2192,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x5C1BAE75)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x5C1BAE74)
-I (..\Task\selfCheck.h)(0x5CD6A493)
+I (..\Task\selfCheck.h)(0x5D312AE9)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x5C1BAE74)
@@ -2024,11 +2200,10 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C1BAE74)
-I (..\Task\shoot.h)(0x5CCA7F8F)
-I (..\Task\gimbal.h)(0x5CCFDB61)
+I (..\Task\shoot.h)(0x5CFB4F57)
+I (..\Task\gimbal.h)(0x5D2BADD0)
 I (..\Task\debug.h)(0x5CCA801A)
-I (..\Task\communication.h)(0x5CCFE253)
-I (..\boards\drv_tim.h)(0x5CCFC944)
+I (..\Task\communication.h)(0x5CEF9B8F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
@@ -2057,18 +2232,20 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
+I (..\devices\pc.h)(0x5CF51CAB)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
 I (..\boards\board.h)(0x5CC99EFC)
 I (..\boards\drv_uart.h)(0x5CC7FBE2)
-I (..\boards\drv_can.h)(0x5CCF23B3)
+I (..\boards\drv_can.h)(0x5D1C23A2)
 I (..\devices\IMU.h)(0x5CCFD531)
 I (..\devices\M2006.h)(0x5CCFDB61)
 I (..\algorithm\pid.h)(0x5C60FECB)
 I (..\algorithm\ZeroCheck.h)(0x5C6105A8)
 I (..\devices\GM6020.h)(0x5CCFDB61)
-I (..\devices\dbus.h)(0x5CD6CF64)
-I (..\devices\led.h)(0x5CD04AFD)
-F (..\Task\shoot.c)(0x5CD80E24)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\shoot.o --omf_browse drone2019_v3\shoot.crf --depend drone2019_v3\shoot.d)
-I (..\Task\shoot.h)(0x5CCA7F8F)
+I (..\devices\dbus.h)(0x5D1C6C76)
+I (..\devices\led.h)(0x5D1AFED7)
+F (..\Task\shoot.c)(0x5D3A805E)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ..\boards -I ..\devices -I ..\algorithm -I ..\Task-I.\RTE\_Drone2019_V3-IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_CL -DUSE_HAL_DRIVER -DSTM32F105xC-o drone2019_v3\shoot.o --omf_browse drone2019_v3\shoot.crf --depend drone2019_v3\shoot.d)
+I (..\Task\shoot.h)(0x5CFB4F57)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5C1BAE74)
 I (F:\keil\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (F:\keil\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -2085,7 +2262,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5C1BAE74)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5C1BAE74)
-I (..\boards\drv_tim.h)(0x5CCFC944)
+I (..\boards\drv_tim.h)(0x5CE7B2D7)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5C1BAE6F)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5CCFC7D1)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5C1BAE6F)
@@ -2115,7 +2292,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h)(0x5C1BAE6F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h)(0x5C1BAE6F)
 I (..\devices\motor.h)(0x5CD6A171)
-I (..\boards\drv_can.h)(0x5CCF23B3)
+I (..\boards\drv_can.h)(0x5D1C23A2)
 I (..\boards\board.h)(0x5CC99EFC)
 I (..\boards\drv_uart.h)(0x5CC7FBE2)
 I (..\devices\M2006.h)(0x5CCFDB61)
@@ -2123,4 +2300,8 @@ I (..\algorithm\pid.h)(0x5C60FECB)
 I (..\algorithm\ZeroCheck.h)(0x5C6105A8)
 I (..\devices\GM6020.h)(0x5CCFDB61)
 I (..\devices\MX64.h)(0x5CD67A34)
-I (..\devices\dbus.h)(0x5CD6CF64)
+I (..\devices\dbus.h)(0x5D1C6C76)
+I (..\devices\frictionWheel.h)(0x5CEFB68D)
+I (F:\keil\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
+I (../Inc/gpio.h)(0x5CCFC7C7)
+I (../Inc/main.h)(0x5CCFC7D1)

@@ -1,30 +1,29 @@
 #ifndef __JUDGMENT_H
 #define __JUDGMENT_H	
 #include "stm32f1xx_hal.h"
-typedef union
+
+struct interactiveData_dat
 {
-	float fdata;
-	unsigned long idata;
-}
-FloatlongType;
-typedef struct
+	uint8_t SOF;//起始0xA5
+	uint16_t dataLength;//数据帧的长度
+	uint8_t seq;//包序号
+	uint8_t CRC8;
+	uint16_t cmd_id;
+	/************************/
+	uint16_t data_cmd_id;
+	uint16_t sender_ID;
+	uint16_t receiver_ID;
+	uint8_t data;
+	/************************/
+	uint16_t CRC16;
+} __attribute__ ((__packed__));
+typedef struct InteractiveData
 {
-	uint8_t RobotLevel;
-	uint8_t bulletFreq;
-	uint16_t remainHP;
-	uint16_t shooterHeat17;
-	uint16_t shooterHeat42;
-	float bulletSpeed;
-	float realChassisOutV;
-	float realChassisOutA;
-	float realChassispower;
-	float remainEnergy;       //剩余能量
-}
-tGameInfo;
-void judgement_config(void);
-void JudgmentInit(int level);
-void BloodCalc(void);
-void HeatCalc(float speed);
-void HeatCold(void);
-short GetHeat(void);
+	union
+	{	
+		uint8_t  raw[16];
+		struct interactiveData_dat dat;
+	}data;
+}InteractiveData;
+void sendMesg(uint16_t u16_senderID,uint16_t u16_receiverID,uint8_t u8_data);
 #endif 

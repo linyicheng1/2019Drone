@@ -60,6 +60,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "drv_can.h"
 #include "usbd_customhid.h"
 /* USER CODE END Includes */
 
@@ -94,7 +95,7 @@ void MX_FREERTOS_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-
+uint8_t test[8];
 /* USER CODE END 0 */
 
 /**
@@ -109,6 +110,9 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+
+
+
   HAL_Init();
 
   /* USER CODE BEGIN Init */
@@ -119,7 +123,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+  HAL_Delay(500);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */

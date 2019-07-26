@@ -7,4 +7,8 @@ void led_RC_Lost(void);
 void led_YAW_Lost(void);
 void led_toggleBullet_Lost(void);
 void led_normal(void);
+void left_friction_Lost(void);
+void right_friction_Lost(void);
+void led_error(void);
+void led_shoot_powerOff(void);
 #endif // __LED_H__

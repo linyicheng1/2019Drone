@@ -3,5 +3,7 @@
 #include "stm32f1xx_hal.h"
 
 HAL_StatusTypeDef friction_set_value(int value);
+HAL_StatusTypeDef friction_set_value2(int value);
+HAL_StatusTypeDef friction_set_value1(int value);
 HAL_StatusTypeDef led_set_value(int value,uint8_t channel);
 #endif // __DRV_TIM_H__

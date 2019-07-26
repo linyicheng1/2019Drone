@@ -51,3 +51,4 @@ drone2019_v3\drv_uart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semp
 drone2019_v3\drv_uart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 drone2019_v3\drv_uart.o: ..\devices\dbus.h
 drone2019_v3\drv_uart.o: ..\devices\volt+.h
+drone2019_v3\drv_uart.o: F:\keil\ARM\ARMCC\Bin\..\include\string.h

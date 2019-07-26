@@ -10,9 +10,9 @@ struct dbus_dat {
     uint32_t s1 : 2;
     uint32_t s2 : 2;
 	//48
-    uint32_t X : 16;
-    uint32_t Y : 16;
-    uint32_t Z : 16;
+    int32_t X : 16;
+    int32_t Y : 16;
+    int32_t Z : 16;
 	//96
     uint32_t left : 8;
     uint32_t right : 8;
@@ -37,7 +37,7 @@ struct dbus_dat {
 	//144 --- 144/8=18
 
 } __attribute__ ((__packed__));
-struct RC
+typedef struct RC
 {
 	union
 	{	
@@ -45,6 +45,9 @@ struct RC
 		struct dbus_dat msg;
 	}dbus;
 	uint32_t updateTime;
-};
+}RC;
+struct RC *getRCData(void);
 void Sbus_Decode(unsigned char *data);
+uint8_t getRisingEdge(float value,float *recordValue);
+uint8_t getFallingEdge(float value,float *recordValue);
 #endif // __DBUS_H__

@@ -17,6 +17,7 @@
 #include "board.h"
 #include "dbus.h"
 #include "volt+.h"
+#include "string.h"
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 extern UART_HandleTypeDef huart3;
@@ -25,7 +26,7 @@ static HAL_StatusTypeDef debuger_hook(void);
 static HAL_StatusTypeDef judgement_hook(void);
 static HAL_StatusTypeDef remoteControl_hook(void);
 
-uint8_t RC_receiveBuffer[18];
+uint8_t RC_receiveBuffer[36];
 uint8_t Debug_receiveBuffer[9];
 float Debug_receive[4];
 /**
@@ -34,6 +35,10 @@ float Debug_receive[4];
   * @retval NONE
   */
 uint64_t deltaT;
+short temp_length = 1;
+short temp_discode = 0;
+short temp_begin = 30;
+uint8_t temp_RC_receiveBuffer[18];
 void UART3_receiveData_hook(void)
 {
 	static short length = 0; 
@@ -49,24 +54,31 @@ void UART3_receiveData_hook(void)
 	__HAL_DMA_DISABLE(huart3.hdmarx);
 
 	/* handle dbus data dbus_buf from DMA */
-	length = 30 - huart3.hdmarx->Instance->CNDTR;
-//	if(deltaT>10000)
-//	{
-//		if(length != 1)
-//		{//如果不是1，则把这一帧丢弃
-//			huart3.hdmarx->Instance->CNDTR = 29;
-//			//报错
-//			state = -1;
-//		}
-//		else 
-//		{
+	length = 36 - huart3.hdmarx->Instance->CNDTR;
+	if(deltaT>3000)
+	{
+		if(length != 1&&state==0)
+		{//如果不是1，则把这一帧丢弃
+			if(temp_discode == 0)
+			{
+//				huart3.hdmarx->Instance->CNDTR = temp_begin;
+				temp_discode = 1;
+			}
+			//报错
+			temp_length = length;
+			state = -1;
+		}
+		else 
+		{
 //			state = 0;
-//		}
-//	}
+		}
+	}
 	if (length == 18)
 	{
-		huart3.hdmarx->Instance->CNDTR = 30;
-		Sbus_Decode(RC_receiveBuffer);
+		huart3.hdmarx->Instance->CNDTR = 36;
+		memcpy(&temp_RC_receiveBuffer[18-temp_length+1],RC_receiveBuffer,temp_length-1);
+		Sbus_Decode(temp_RC_receiveBuffer);
+		memcpy(temp_RC_receiveBuffer,&RC_receiveBuffer[temp_length-1],18-temp_length+1);
 	}		
 	/* restart dma transmission */		
 	__HAL_DMA_ENABLE(huart3.hdmarx);
@@ -147,4 +159,19 @@ static HAL_StatusTypeDef judgement_hook(void)
 {
 	
 }
+
+#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+/**
+  * @brief  Retargets the C library printf function to the USART.
+  * @param  None
+  * @retval None
+  */
+PUTCHAR_PROTOTYPE
+{
+  /* Place your implementation of fputc here */
+  /* e.g. write a character to the EVAL_COM1 and Loop until the end of transmission */
+  HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
+  return ch;
+}
+
 

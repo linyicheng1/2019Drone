@@ -39,6 +39,32 @@ HAL_StatusTypeDef friction_set_value(int value)
 	}
 }
 /**
+  * @brief  设置摩擦轮速度
+  * @param  value:百分比
+  * @retval HAL status
+  */
+HAL_StatusTypeDef friction_set_value1(int value)
+{
+	int pwm = (int)value;//最大为2000
+	if(pwm_set_value(&htim3,1,pwm)==HAL_OK)
+	{
+		return HAL_OK;
+	}
+}
+/**
+  * @brief  设置摩擦轮速度
+  * @param  value:百分比
+  * @retval HAL status
+  */
+HAL_StatusTypeDef friction_set_value2(int value)
+{
+	int pwm = (int)value;//最大为2000
+	if(pwm_set_value(&htim3,2,pwm)==HAL_OK)
+	{
+		return HAL_OK;
+	}
+}
+/**
   * @brief  设置pwm波的占空比
   * @param  
   * @retval HAL status

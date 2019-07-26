@@ -46,3 +46,14 @@ drone2019_v3\debug.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 drone2019_v3\debug.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h
 drone2019_v3\debug.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h
 drone2019_v3\debug.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+drone2019_v3\debug.o: ..\devices\motor.h
+drone2019_v3\debug.o: ..\boards\drv_can.h
+drone2019_v3\debug.o: ..\boards\board.h
+drone2019_v3\debug.o: ..\boards\drv_tim.h
+drone2019_v3\debug.o: ..\boards\drv_can.h
+drone2019_v3\debug.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+drone2019_v3\debug.o: ..\devices\M2006.h
+drone2019_v3\debug.o: ..\algorithm\pid.h
+drone2019_v3\debug.o: ..\algorithm\ZeroCheck.h
+drone2019_v3\debug.o: ..\devices\GM6020.h
+drone2019_v3\debug.o: ..\devices\MX64.h

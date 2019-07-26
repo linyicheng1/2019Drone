@@ -59,3 +59,5 @@ drone2019_v3\gimbal.o: ..\devices\GM6020.h
 drone2019_v3\gimbal.o: ..\devices\MX64.h
 drone2019_v3\gimbal.o: ..\devices\dbus.h
 drone2019_v3\gimbal.o: ..\Task\selfcheck.h
+drone2019_v3\gimbal.o: ..\devices\pc.h
+drone2019_v3\gimbal.o: ..\devices\imu.h

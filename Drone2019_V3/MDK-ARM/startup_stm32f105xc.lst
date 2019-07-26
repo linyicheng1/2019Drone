@@ -90,10 +90,12 @@ ARM Macro Assembler    Page 2
    49 00000000         
    50 00000000 00000400 
                        Stack_Size
-                               EQU              0x400
+                               EQU              0x400       ;C: Stack_Size = 0x
+                                                            400 == 1024
    51 00000000         
    52 00000000                 AREA             STACK, NOINIT, READWRITE, ALIGN
-=3
+=3 
+                                                            ;AREA Œ±÷∏¡Ó
    53 00000000         Stack_Mem
                                SPACE            Stack_Size
    54 00000400         __initial_sp
@@ -126,14 +128,14 @@ ARM Macro Assembler    Page 2
    77 00000000         
    78 00000000 00000000 
                        __Vectors
-                               DCD              __initial_sp ; Top of Stack
-   79 00000004 00000000        DCD              Reset_Handler ; Reset Handler
 
 
 
 ARM Macro Assembler    Page 3 
 
 
+                               DCD              __initial_sp ; Top of Stack
+   79 00000004 00000000        DCD              Reset_Handler ; Reset Handler
    80 00000008 00000000        DCD              NMI_Handler ; NMI Handler
    81 0000000C 00000000        DCD              HardFault_Handler ; Hard Fault 
                                                             Handler
@@ -191,14 +193,14 @@ ARM Macro Assembler    Page 3
   115 0000008C 00000000        DCD              CAN1_TX_IRQHandler ; CAN1 TX
   116 00000090 00000000        DCD              CAN1_RX0_IRQHandler ; CAN1 RX0
   117 00000094 00000000        DCD              CAN1_RX1_IRQHandler ; CAN1 RX1
-  118 00000098 00000000        DCD              CAN1_SCE_IRQHandler ; CAN1 SCE
-  119 0000009C 00000000        DCD              EXTI9_5_IRQHandler 
 
 
 
 ARM Macro Assembler    Page 4 
 
 
+  118 00000098 00000000        DCD              CAN1_SCE_IRQHandler ; CAN1 SCE
+  119 0000009C 00000000        DCD              EXTI9_5_IRQHandler 
                                                             ; EXTI Line 9..5
   120 000000A0 00000000        DCD              TIM1_BRK_IRQHandler 
                                                             ; TIM1 Break
@@ -256,14 +258,14 @@ ARM Macro Assembler    Page 4
                                                             ; DMA2 Channel4
   156 00000130 00000000        DCD              DMA2_Channel5_IRQHandler 
                                                             ; DMA2 Channel5
-  157 00000134 00000000        DCD              0           ; Reserved
-  158 00000138 00000000        DCD              0           ; Reserved
 
 
 
 ARM Macro Assembler    Page 5 
 
 
+  157 00000134 00000000        DCD              0           ; Reserved
+  158 00000138 00000000        DCD              0           ; Reserved
   159 0000013C 00000000        DCD              CAN2_TX_IRQHandler ; CAN2 TX
   160 00000140 00000000        DCD              CAN2_RX0_IRQHandler ; CAN2 RX0
   161 00000144 00000000        DCD              CAN2_RX1_IRQHandler ; CAN2 RX1
@@ -321,14 +323,14 @@ K]
                                PROC
   204 00000010                 EXPORT           UsageFault_Handler         [WEA
 K]
-  205 00000010 E7FE            B                .
-  206 00000012                 ENDP
 
 
 
 ARM Macro Assembler    Page 6 
 
 
+  205 00000010 E7FE            B                .
+  206 00000012                 ENDP
   207 00000012         SVC_Handler
                                PROC
   208 00000012                 EXPORT           SVC_Handler                [WEA
@@ -386,14 +388,14 @@ K]
   240 0000001A                 EXPORT           DMA1_Channel3_IRQHandler   [WEA
 K]
   241 0000001A                 EXPORT           DMA1_Channel4_IRQHandler   [WEA
-K]
-  242 0000001A                 EXPORT           DMA1_Channel5_IRQHandler   [WEA
 
 
 
 ARM Macro Assembler    Page 7 
 
 
+K]
+  242 0000001A                 EXPORT           DMA1_Channel5_IRQHandler   [WEA
 K]
   243 0000001A                 EXPORT           DMA1_Channel6_IRQHandler   [WEA
 K]
@@ -451,14 +453,14 @@ AK]
 K]
   270 0000001A                 EXPORT           TIM5_IRQHandler            [WEA
 K]
-  271 0000001A                 EXPORT           SPI3_IRQHandler            [WEA
-K]
 
 
 
 ARM Macro Assembler    Page 8 
 
 
+  271 0000001A                 EXPORT           SPI3_IRQHandler            [WEA
+K]
   272 0000001A                 EXPORT           UART4_IRQHandler           [WEA
 K]
   273 0000001A                 EXPORT           UART5_IRQHandler           [WEA
@@ -516,14 +518,14 @@ K]
   312 0000001A         TIM1_UP_IRQHandler
   313 0000001A         TIM1_TRG_COM_IRQHandler
   314 0000001A         TIM1_CC_IRQHandler
-  315 0000001A         TIM2_IRQHandler
-  316 0000001A         TIM3_IRQHandler
 
 
 
 ARM Macro Assembler    Page 9 
 
 
+  315 0000001A         TIM2_IRQHandler
+  316 0000001A         TIM3_IRQHandler
   317 0000001A         TIM4_IRQHandler
   318 0000001A         I2C1_EV_IRQHandler
   319 0000001A         I2C1_ER_IRQHandler
@@ -581,14 +583,14 @@ Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=drone2019_v3\startup_stm32f105xc.d -odrone2019_v3\startup_stm32f10
 5xc.o -I..\\Inc -I.\RTE\_Drone2019_V3 -IF:\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Incl
 ude -IF:\keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__MICROLIB S
-ETA 1" --predefine="__UVISION_VERSION SETA 527" --predefine="_RTE_ SETA 1" --pr
-edefine="STM32F10X_CL SETA 1" --list=startup_stm32f105xc.lst startup_stm32f105x
 
 
 
 ARM Macro Assembler    Page 10 
 
 
+ETA 1" --predefine="__UVISION_VERSION SETA 527" --predefine="_RTE_ SETA 1" --pr
+edefine="STM32F10X_CL SETA 1" --list=startup_stm32f105xc.lst startup_stm32f105x
 c.s
 
 

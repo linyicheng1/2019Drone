@@ -55,6 +55,12 @@ drone2019_v3\main.o: ../Inc/usbd_conf.h
 drone2019_v3\main.o: F:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 drone2019_v3\main.o: F:\keil\ARM\ARMCC\Bin\..\include\string.h
 drone2019_v3\main.o: ../Inc/gpio.h
+drone2019_v3\main.o: ..\boards\drv_can.h
+drone2019_v3\main.o: ..\boards\board.h
+drone2019_v3\main.o: ..\boards\drv_tim.h
+drone2019_v3\main.o: ..\boards\drv_uart.h
+drone2019_v3\main.o: ..\boards\drv_can.h
+drone2019_v3\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 drone2019_v3\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h
 drone2019_v3\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 drone2019_v3\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h

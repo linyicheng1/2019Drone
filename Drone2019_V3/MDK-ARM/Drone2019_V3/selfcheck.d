@@ -20,7 +20,6 @@ drone2019_v3\selfcheck.o: ..\Task\shoot.h
 drone2019_v3\selfcheck.o: ..\Task\gimbal.h
 drone2019_v3\selfcheck.o: ..\Task\debug.h
 drone2019_v3\selfcheck.o: ..\Task\communication.h
-drone2019_v3\selfcheck.o: ..\boards\drv_tim.h
 drone2019_v3\selfcheck.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 drone2019_v3\selfcheck.o: ../Inc/stm32f1xx_hal_conf.h
 drone2019_v3\selfcheck.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
@@ -50,6 +49,8 @@ drone2019_v3\selfcheck.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart
 drone2019_v3\selfcheck.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h
 drone2019_v3\selfcheck.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h
 drone2019_v3\selfcheck.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
+drone2019_v3\selfcheck.o: ..\devices\pc.h
+drone2019_v3\selfcheck.o: ..\boards\drv_tim.h
 drone2019_v3\selfcheck.o: ..\boards\board.h
 drone2019_v3\selfcheck.o: ..\boards\drv_uart.h
 drone2019_v3\selfcheck.o: ..\boards\drv_can.h

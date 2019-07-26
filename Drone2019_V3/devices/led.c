@@ -36,6 +36,26 @@ void led_normal(void)
 		cnt = 0;
 }
 /**
+  * @brief  error 严重错误
+  * @param  none
+  * @retval none
+  */
+void led_error(void)
+{
+	blueOff();
+	redOn();
+}
+/**
+  * @brief  
+  * @param  none
+  * @retval none
+  */
+void led_shoot_powerOff(void)
+{
+	blueOn();
+	redOff();
+}
+/**
   * @brief  辅瞄模式 蓝灯 慢双闪
   *         1 ms 进入一次
   * @param  none
@@ -92,7 +112,6 @@ void led_selfCheck(void)
 {
 	redOn();
 	blueOn();
-
 }
 /**
   * @brief  IMU掉线
@@ -169,6 +188,66 @@ void led_toggleBullet_Lost(void)
 void led_device1_Lost(id)
 {
 	
+}
+/**
+  * @brief  left friction 掉线
+  *         1 ms 进入一次
+  * @param  none
+  * @retval none
+  */
+void left_friction_Lost(void)
+{
+	static int cnt;
+	redOn();
+	if(cnt%10 == 0)
+	{
+		blueOn();
+	}
+	else if(cnt%10 == 1)
+	{
+		blueOff();
+	}
+	else if(cnt%10 == 5)
+	{
+		blueOn();
+	}
+	else if(cnt%10 == 6)
+	{
+		blueOff();
+	}
+	cnt ++;
+	if(cnt>100000)
+		cnt = 0;
+}
+/**
+  * @brief  right friction 掉线
+  *         1 ms 进入一次
+  * @param  none
+  * @retval none
+  */
+void right_friction_Lost(void)
+{
+	static int cnt;
+	blueOn();
+	if(cnt%10 == 0)
+	{
+		redOn();
+	}
+	else if(cnt%10 == 1)
+	{
+		redOff();
+	}
+	else if(cnt%10 == 5)
+	{
+		redOn();
+	}
+	else if(cnt%10 == 6)
+	{
+		redOff();
+	}
+	cnt ++;
+	if(cnt>100000)
+		cnt = 0;
 }
 /**
   * @brief  由于不同led驱动不一样，在这做一层封装

@@ -58,3 +58,7 @@ drone2019_v3\shoot.o: ..\algorithm\ZeroCheck.h
 drone2019_v3\shoot.o: ..\devices\GM6020.h
 drone2019_v3\shoot.o: ..\devices\MX64.h
 drone2019_v3\shoot.o: ..\devices\dbus.h
+drone2019_v3\shoot.o: ..\devices\frictionWheel.h
+drone2019_v3\shoot.o: F:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+drone2019_v3\shoot.o: ../Inc/gpio.h
+drone2019_v3\shoot.o: ../Inc/main.h
